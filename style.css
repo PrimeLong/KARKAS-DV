@@ -409,14 +409,24 @@ footer {
 /* ====== Мобильная адаптация header/menu ====== */
 @media (max-width: 760px) {
   .container { padding: 0 8px; }      /* паддинг для контейнера */
-  header .container { padding: 14px 0; }
+  header .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  nav .menu {
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
   nav .menu {
     position: absolute;
     left: 0; right: 0;
     top: 100%; /* сразу под шапкой */
     background-color: var(--dark);
     flex-direction: column;
-    width: 100%;
+    width: calc(100% + 16px);
+    margin-left: -8px;
+    margin-right: -8px;
     box-sizing: border-box;
     z-index: 200;
     padding: 16px 8px 24px 8px; /* паддинг как у контейнера! */
