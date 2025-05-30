@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KARKAS-DV — Кованые изделия на заказ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="container header-bg">
+        <div class="header-flex">
+          <div class="logo-title">
+            <img src="img/logo_cleaned.png" alt="KARKAS-DV Логотип" class="logo" />
+            <span class="site-title">KARKAS-DV</span>
+          </div>
+          <nav>
+            <ul class="menu" id="menu">
+              <li><a href="#catalog">Каталог</a></li>
+              <li><a href="#about">О нас</a></li>
+              <li><a href="#contact">Контакты</a></li>
+            </ul>
+            <div class="burger" id="burger" aria-label="Меню" tabindex="0">
+              <span></span><span></span><span></span>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Кованые изделия любой сложности</h2>
+      <p>Изготовление металлоконструкций с художественной ковкой по вашему эскизу. Доставка по всей России.</p>
+      <a href="#catalog" class="btn">Перейти в каталог</a>
+    </div>
+  </section>
+
+  <section id="catalog" class="catalog">
+    <div class="container">
+      <h2 class="section-title">Каталог продукции</h2>
+      <div class="products" id="products"></div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">О нас</h2>
+      <p>С 2006 года радуем своими изделиями загородные дома Приморского края и всей России.</p>
+      <p>Изготавливаем металлоконструкции с художественной ковкой (горячая/холодная ковка). У наших мастеров золотые руки и в каждое изделие вкладывается частичка тепла и доброты.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Контакты</h2>
+      <ul class="contact-list">
+        <li><strong>Телефон:</strong> +7 951 027-44-83</li>
+        <li><strong>Email:</strong> managerkarkasdv@mail.ru</li>
+        <li><strong>Адрес производства:</strong> г. Уссурийск, ул. Урицкого 71</li>
+      </ul>
+      <div class="socials">
+        <a href="https://t.me/yourusername" target="_blank" aria-label="Telegram">
+          <img src="img/icons/tg.svg" alt="Telegram" width="30" height="30">
+        </a>
+        <a href="https://vk.com/yourpage" target="_blank" aria-label="VK">
+          <img src="img/icons/vk.svg" alt="VK" width="30" height="30">
+        </a>
+        <a href="https://wa.me/79510274483" target="_blank" aria-label="WhatsApp">
+          <img src="img/icons/wa.svg" alt="WhatsApp" width="30" height="30">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 KARKAS-DV. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/catalog-gen.js"></script>
+</body>
+</html>
