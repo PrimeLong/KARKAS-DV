@@ -1,0 +1,130 @@
+header {
+  background: var(--dark);
+  color: #fff;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  animation: fadeInDown 0.7s;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  position: relative;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+.site-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+nav {
+  position: static;
+  display: flex;
+  align-items: center;
+}
+
+nav .menu {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+nav .menu li { padding: 0 10px; }
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+nav a:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: scale(1.07);
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  margin-left: 18px;
+}
+.burger span {
+  height: 3px;
+  background-color: var(--accent);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+@media (max-width: 760px) {
+  header .container { padding: 14px 0; }
+  nav .menu {
+    position: absolute;
+    left: 0; right: 0;
+    top: 100%; /* сразу под шапкой */
+    background-color: var(--dark);
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 200;
+    padding: 16px 8px 24px 8px; /* паддинг как у контейнера! */
+    margin: 0;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 8px 32px rgba(40,40,40,0.12);
+    opacity: 0;
+    max-height: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, max-height 0.3s;
+  }
+  nav .menu.open {
+    opacity: 1;
+    max-height: 400px;
+    pointer-events: all;
+  }
+  nav .menu li {
+    margin: 12px 0;
+    text-align: center;
+  }
+  .burger {
+    display: flex;
+  }
+  .burger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  .burger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .burger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
