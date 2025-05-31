@@ -91,11 +91,32 @@ nav a:hover {
 
 @media (max-width: 760px) {
   .header-flex {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    gap: 8px;
+    align-items: center;
   }
 
   .logo-title {
+    gap: 6px;
+    align-items: center;
     min-width: 0;
+    max-width: 70vw;
+    flex-shrink: 1;
+  }
+
+  .logo {
+    height: 34px;
+    max-width: 40px;
+    min-width: 0;
+  }
+  
+  .site-title {
+    font-size: 1.1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 60vw;
+    font-weight: 700;
   }
 
   header .container { padding: 14px 0; }
@@ -132,7 +153,7 @@ nav a:hover {
   .burger {
     display: flex;
     position: relative;
-    z-index: 9000; /* всегда выше меню */
+    z-index: 1000; /* всегда выше меню */
     width: 28px;
     height: 20px;
   }
