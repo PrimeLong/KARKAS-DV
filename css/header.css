@@ -101,7 +101,7 @@ nav a:hover {
     flex: 0 0 auto;
     display: flex;
     align-items: center;
-    margin-right: 12px; /* отступ между лого и текстом */
+    margin-right: 14px; /* <--- ОТСТУП МЕЖДУ ЛОГО И ТЕКСТОМ */
   }
   .logo {
     height: 34px;
@@ -114,14 +114,10 @@ nav a:hover {
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 1px;
+    margin: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    position: absolute;
-    left: 0; right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
     z-index: 1;
   }
   .burger {
@@ -130,7 +126,7 @@ nav a:hover {
     align-items: center;
     width: 32px;
     height: 32px;
-    margin: 0;
+    margin-left: 14px; /* <--- ОТСТУП ОТ ТЕКСТА */
     z-index: 2;
   }
   .burger span {
