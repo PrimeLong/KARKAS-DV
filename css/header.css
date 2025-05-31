@@ -92,8 +92,8 @@ nav a:hover {
 @media (max-width: 760px) {
   .header-flex {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     position: relative;
     height: 48px;
   }
@@ -101,6 +101,7 @@ nav a:hover {
     flex: 0 0 auto;
     display: flex;
     align-items: center;
+    margin-right: 12px; /* отступ между лого и текстом */
   }
   .logo {
     height: 34px;
@@ -113,7 +114,6 @@ nav a:hover {
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 1px;
-    margin: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -121,7 +121,7 @@ nav a:hover {
     left: 0; right: 0;
     top: 50%;
     transform: translateY(-50%);
-    pointer-events: none; /* чтобы бургер был кликабелен! */
+    pointer-events: none;
     z-index: 1;
   }
   .burger {
@@ -156,7 +156,7 @@ nav a:hover {
     max-width: 100vw;
   }
   nav {
-    width: 0; /* скрываем nav, меню будет как оверлей */
+    width: 0;
     height: 0;
     overflow: visible;
     position: static;
