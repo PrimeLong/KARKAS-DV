@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KARKAS-DV — Кованые изделия на заказ</title>
+  <meta name="description" content="Изготовление металлоконструкций с художественной ковкой по вашему эскизу. Доставка по всей России." />
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/main-sections.css">
+  <link rel="stylesheet" href="css/catalog.css">
+  <!-- <link rel="stylesheet" href="css/socials.css"> -->
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="container header-flex">
+      <div class="logo-title">
+        <a href="/" tabindex="0">
+          <img src="img/logo_cleaned.png" alt="Логотип KARKAS-DV" class="logo" />
+        </a>
+      </div>
+      <span class="site-title">KARKAS-DV</span>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <ul class="menu" id="menu">
+          <li><a href="#catalog">Каталог</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Кованые изделия любой сложности</h2>
+        <p>Изготовление металлоконструкций с художественной ковкой по вашему эскизу. Доставка по всей России.</p>
+        <a href="#catalog" class="btn">Перейти в каталог</a>
+      </div>
+    </section>
+
+    <section id="catalog" class="catalog">
+      <div class="container">
+        <h2 class="section-title">Каталог продукции</h2>
+        <div class="products" id="products"></div>
+      </div>
+    </section>
+
+    <section id="about" class="about about-full">
+      <div class="container about-grid">
+        <div class="about-visual">
+          <img src="img/кузнец.png" alt="Кузнец" class="about-image" />
+        </div>
+        <div class="about-info">
+          <h2 class="section-title">О нас</h2>
+          <p>С 2006 года наша компания радует своими изделиями загородные дома Приморского края. Некоторые изделия разъехались по всей России.</p>
+          <p>Мы занимаемся изготовлением металлоконструкций с художественной ковкой, используя методы горячей и холодной ковки.</p>
+          <p>У наших мастеров золотые руки, и в каждое изделие вкладывается частичка тепла и доброты. Каждое наше изделие горячо любимо нами и мы радуемся вместе с вами, когда оно согревает ваши сердца.</p>
+          <p>Наши клиенты всегда довольны результатами и рекомендуют нас своим друзьям и соседям!</p>
+        </div>
+      </div>
+      <div class="container about-stats">
+        <div class="about-stat">
+          <div class="about-stat-decor">15 лет</div>
+          <div class="about-stat-text">15 лет наша компания радует своими изделиями владельцев недвижимости Приморского края.</div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-decor">8 тонн</div>
+          <div class="about-stat-text">За этот период использовано более 8 тонн лакокрасочных материалов.</div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-decor">500 км</div>
+          <div class="about-stat-text">Использовано в изделиях более 500 км металла. Да, да. Именно километров.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Контакты</h2>
+        <ul class="contact-list">
+          <li><strong>Телефон:</strong> <a href="tel:+79510274483">+7 951 027-44-83</a></li>
+          <li><strong>Email:</strong> <a href="mailto:managerkarkasdv@mail.ru">managerkarkasdv@mail.ru</a></li>
+          <li><strong>Адрес производства:</strong> г. Уссурийск, ул. Урицкого 71</li>
+        </ul>
+        <!--
+        <div class="socials">
+          <a href="https://t.me/yourusername" target="_blank" aria-label="Telegram">
+            <img src="img/icons/tg.svg" alt="Telegram" width="30" height="30">
+          </a>
+          <a href="https://vk.com/yourpage" target="_blank" aria-label="VK">
+            <img src="img/icons/vk.svg" alt="VK" width="30" height="30">
+          </a>
+          <a href="https://wa.me/79510274483" target="_blank" aria-label="WhatsApp">
+            <img src="img/icons/wa.svg" alt="WhatsApp" width="30" height="30">
+          </a>
+        </div>
+        -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 KARKAS-DV. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/catalog-gen.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+header {
+  background: var(--dark);
+  color: #fff;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  animation: fadeInDown 0.7s;
+}
+
+.header-flex,
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+header .container {
+  padding: 18px 0;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-right: 16px; /* Добавлен небольшой отступ справа для воздуха */
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+.site-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+nav {
+  position: static;
+  display: flex;
+  align-items: center;
+}
+
+nav .menu {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav .menu li {
+  padding: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+nav a:hover,
+nav a:focus {
+  background: var(--accent);
+  color: #fff;
+  transform: scale(1.07);
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  min-width: 0;
+  margin-left: 10px;
+  background: transparent;
+  border: none;
+  z-index: 110;
+}
+.burger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  margin: 3px 0;
+  background-color: var(--accent);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+@media (max-width: 760px) {
+  header .container {
+    padding: 7px 12px;
+    max-width: 100vw;
+  }
+  .logo {
+    height: 34px;
+  }
+  .site-title {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  .logo-title {
+    margin-right: 10px;
+  }
+  .burger {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+  }
+  .burger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  .burger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .burger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+  nav {
+    width: 0;
+    height: 0;
+    overflow: visible;
+    position: static;
+  }
+  nav .menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--dark);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    display: flex;
+  }
+  nav .menu.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+  nav .menu li {
+    margin: 30px 0;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Для удобства на планшетах можно добавить плавный переход для site-title и logo */
+@media (max-width: 1200px) {
+  .logo { height: 48px; }
+  .site-title { font-size: 1.5rem; }
+}
